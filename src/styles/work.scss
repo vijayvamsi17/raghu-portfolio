@@ -1,0 +1,74 @@
+
+@import '../styles/variables';
+@import '../styles/mixins';
+
+.workContainer {
+
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+
+    .imageBox {
+        margin-top: 50px;
+        height: 300px;
+        width: 100%;
+        position: absolute;
+        right: 25px;
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .imageBox:hover {
+        .textBg {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($background-color, 0.9);
+        }
+    }
+
+    .img-container{
+        position:relative;
+        overflow: hidden;
+      }
+      .img-container {
+
+        .overlay{
+          position:absolute;
+          top:0;
+          left:0;
+          width:100%;
+          height:100%;
+          background:rgba($secondary-color, 0.7);
+          opacity:0;
+          @include easeout;
+
+          span{
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            color:$light-color;
+            font-size: 20px;
+          }
+        }
+      }
+      .img-container:hover {
+        
+        .overlay{
+          opacity:1;
+        }
+
+        img {
+          transform: scale(1.5);
+          @include easeout;
+        }
+      }
+    
+}

@@ -1,0 +1,40 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+.homeContainer {
+    position: absolute;
+    text-align: center;
+    width: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $light-color;
+
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-weight: 200;
+        font-size: 25px;
+
+    }
+
+    .lastName {
+        color: $secondary-color;
+    }
+
+    .socialmedia {
+        a {
+            margin-right: 12px;
+            font-size: 18px;
+        }
+
+        a:hover {
+            color: $secondary-color;
+            cursor: pointer;
+            @include easeout;
+        }
+    }
+
+}

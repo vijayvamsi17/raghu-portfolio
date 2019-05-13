@@ -1,0 +1,62 @@
+@import './styles/variables';
+@import './styles/mixins';
+
+body {
+  @include background;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+
+  .service-head {
+    color: $light-color;
+    h4 {
+        font-size: 1.2em;
+        color: $light-color;
+        background: $secondary-color;
+        display: inline-block;
+        padding: .5em 1.5em;
+        position: relative;
+        font-weight: 200;
+        // box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+    h4:before {
+        width: 0;
+        height: 0;
+        position: absolute;
+        content: '';
+        bottom: -9px;
+        left: 12px;
+        border-style: solid;
+        border-width: 14px 11px 0 12px;
+        border-color: $secondary-color transparent transparent transparent;
+    }
+    h3 {
+        font-weight: 200;
+        span {
+            font-weight: 700;
+        }
+    }
+
+    span.border {
+        width: 18%;
+        background: #8C8989;
+        height: 1px;
+        display: block;
+        margin-top: 26px;
+        position: relative;
+        margin: 23px auto 0px;
+    }
+
+    span.border.one:after {
+        content: ' ';
+        position: absolute;
+        background: $secondary-color;
+        height: 7px;
+        display: block;
+        width: 73px;
+        top: -4px;
+        left: 50%;
+        transform: translate(-50%)
+    }
+    
+} 
+}
