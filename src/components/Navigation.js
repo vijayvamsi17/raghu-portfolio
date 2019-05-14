@@ -96,9 +96,9 @@ class Navigation extends Component {
                             <li className={this.state.routes.photography ? "nav-item current" : "nav-item"} onClick={() => this.selectedLink("photography")}>
                                 <NavLink className="nav-link" to="/photography">Photography</NavLink>
                             </li>
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                                 <a className="nav-link" href="#">Contact</a>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
                     <div>
